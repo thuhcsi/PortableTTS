@@ -1,4 +1,10 @@
 # PortableTTS: Lightweight End-to-end Text-to-Speech
+PortableTTS is based on [PortaSpeech](https://github.com/NATSpeech/NATSpeech) and [iSTFTNet](https://github.com/rishikksh20/iSTFTNet-pytorch).
+
+The text encoder and decoder are based on [FFT blocks](https://arxiv.org/abs/1905.09263).
+
+Then, decoder output is converted to wave by iSTFTNet-C8C8I.
+
 Demos are available at: https://thuhcsi.github.io/PortableTTS/
 ## Setup environment
 
@@ -43,3 +49,13 @@ Then, run:
 bash run.sh
 ```
 and this will generate inference samples in `datalist.jsonl` of test set.
+
+## References
+
+Preprocess scripts from [wetts](https://github.com/wenet-e2e/wetts).
+
+Encoder and decoder from [PortaSpeech](https://github.com/NATSpeech/NATSpeech).
+
+Vocoder from [iSTFTNet](https://github.com/rishikksh20/iSTFTNet-pytorch).
+
+Architecture from [JETS](https://arxiv.org/abs/2203.16852).
